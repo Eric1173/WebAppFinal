@@ -132,7 +132,7 @@
   </head>
   <body>
     <!-- sound -->
-    <audio id="main_music" autoplay loop>
+    <audio id="main_music" loop>
       <source src="../img2/Owls.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
@@ -141,6 +141,9 @@
       audio.volume = 0.3;
     </script>
     <div class="box2 position-fixed" onclick="mute()">
+      <img id="mute" src="../img2/musical-notes-outline.svg">
+    </div>
+    <div class="box2 position-fixed" style="bottom: 100px;" onclick="play()">
       <img id="mute" src="../img2/musical-notes-outline.svg">
     </div>
     <script>
@@ -155,6 +158,10 @@
           div.muted = true;
           div2.src = '../img2/volume-mute-outline.svg';
         }
+      }
+      function play(){
+        var div3 = document.getElementById('main_music');
+        div3.play;
       }
     </script>
 
