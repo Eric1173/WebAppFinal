@@ -132,19 +132,16 @@
   </head>
   <body>
     <!-- sound -->
-    <audio id="main_music" loop>
-      <source src="../img2/Owls.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
-    <script>
+    <audio id="main_music" src="../img2/Owls.mp3" loop></audio>
+<!--     <script>
       var audio = document.querySelector('audio');
       audio.volume = 0.3;
-    </script>
+    </script> -->
     <div class="box2 position-fixed" onclick="mute()">
       <img id="mute" src="../img2/musical-notes-outline.svg">
     </div>
     <div class="box2 position-fixed" style="bottom: 100px;" onclick="play()">
-      <img id="mute" src="../img2/musical-notes-outline.svg">
+      <img src="../img2/musical-notes-outline.svg">
     </div>
     <script>
       function mute(){
@@ -160,8 +157,10 @@
         }
       }
       function play(){
-        var div3 = document.getElementById('main_music');
+        var div3 = document.querySelector('audio');
         div3.play;
+        div3.volume = 0.3;
+        this.style.display = 'none';
       }
     </script>
 
